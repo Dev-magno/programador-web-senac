@@ -14,6 +14,19 @@
             background-color: black;
             color: #FFFFFF;
         }
+
+        .azul {
+            color: blue;
+        }
+
+
+        .sublinhado {
+            text-decoration: underline;
+        }
+
+        #maisculo {
+            text-transform: uppercase;
+        }
     </style>
 
 <body>
@@ -22,12 +35,12 @@
     <a href="sobre.html">SOBRE</a>
 
 
-    <h1>Olá Mundo!</h1>
-    <p>Isso é um parágrafo</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae et voluptatem adipisci placeat
+    <h1><span style="color: red;">O</span>lá Mundo!</h1>
+    <p id="maisculo">Isso é um parágrafo</p>
+    <p>Lorem <q>ipsum dolor sit amet consectetur</q> adipisicing elit. Minima repudiandae et voluptatem adipisci placeat
         consequatur quas rem, ipsam, labore quo dicta, dolor vel totam distinctio accusantium deleniti cum inventore
         accusamus?</p>
-        <pre>
+        <pre class="azul sublinhado" id="maisculo">
             Rosas são vermelhas.
             Violetas são azuis
         </pre>
@@ -42,6 +55,41 @@
     <a href="https://www.python.org/" target="_blank">
         <img src="img/PYTHON.png" alt="imagem de TI" width="50%" height="400px">
     </a>
+
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>html é uma linguagem de marcação</dd>
+    </dl>
+
+    <dl>
+        <dt>CSS</dt>
+        <dd>css é uma linguagem de estilização</dd>
+    </dl>
+
+    <!--Inciando uma tabela-->
+    <table> 
+        <tr>  <!-- linha da tabela -->
+            <th>Nome</th>  <!-- cabeçalhos da coluna -->
+            <th>Idade</th>
+        </tr>
+
+        <tr>
+            <td>Juliana</td>  <!-- Dados da coluna -->
+            <td>20</td>
+        </tr>
+
+        <tr>
+            <td>Júlia</td>
+            <td>30</td>
+        </tr>
+    </table>
 
 </body>
 </head>
