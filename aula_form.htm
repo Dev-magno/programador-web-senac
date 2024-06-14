@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form action="" enctype="multipart/form-data">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="Fulano">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+
+                <label for="num">Número</label>
+                <input type="number" name="numero" id="num">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="iemail">
+
+                <label for="busca">Busca</label>
+                <input type="search" name="busca" id="busca">
+
+                <fieldset>
+                    <legend>Qual sua linguagem favorita?</legend>
+                    <input type="radio" name="lang" id="html" value="html">
+                    <label for="html">HTML</label>
+
+                    <input type="radio" name="lang" id="css" value="css">
+                    <label for="css">CSS</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como você chega no SENAC</legend>
+                    <input type="checkbox" name="transporte[]" id="pe">
+                    <label for="pe">A Pé</label>
+
+                    <input type="checkbox" name="transporte[]" id="onibus">
+                    <label for="onibus">Onibus</label>
+                </fieldset>
+
+                <label for="cor">Cor</label>
+                <input type="color" name="cor" id="cor">
+
+                <label for="dat">Data</label>
+                <input type="date" name="data" id="data">
+
+                <label for="foto">Foto de Perfil</label>
+                <input type="file" name="fot" id="foto" accept="image/*">
+
+                <input type="hidden" name="id" value="200">
+
+                <label for="tam">Selecione o tamanho da roupa</label>
+                <select name="tamanho-roupa" id="tam"></select>
+                <option value="p">P</option>
+                <option value="m">M</option>
+                <option value="g" selected>G</option>
+
+                <textarea name="descricao" id="descricao" cols="10" rows="10"></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
