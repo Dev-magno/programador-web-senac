@@ -68,6 +68,7 @@ while(contador < 10){
     contador++
 }
 
+
 do {
     console.log(contador)
     contador++
@@ -93,7 +94,7 @@ do {
 
     // Arrays
 
-    const frutas = ['maça', 'banana', 'morango']
+    // const frutas = ['maça', 'banana', 'morango']
     console.log(frutas[0])
 
     for (let f = 0; f < frutas.length; f++){
@@ -108,3 +109,42 @@ do {
     frutas.forEach(function(f){
         console.log(f)
     })
+
+    console.log(frutas.length)
+
+    // Objetos
+    let pessoa = {
+        nome: "João",
+        idade: 30,
+        profissão: "Engenheiro"
+    }
+
+    // Forma de acesso usando ponto
+    console.log(pessoa.idade)
+
+    // Forma de acesso usando parentese
+    console.log(pessoa["idade"])
+
+    // Depuração e tratamento de erros
+    // debugger
+
+
+    console.error("Deu erro")
+
+    let x = 10
+    let y = "a"
+    try {
+        if (y == 0){
+            throw RangeError("Valor zero não é permitido")
+        }
+        else if (typeof(y) == "string" || typeof(x) == "string"){
+            throw TypeError("Valor do tipo string não é permitido")
+        }
+        console.log(x/y)
+    } catch(error) {
+        console.error("Aconteceu um erro: " + error)
+        console.error(`O erro ${error} aconteceu`)
+    }
+
+    
+
