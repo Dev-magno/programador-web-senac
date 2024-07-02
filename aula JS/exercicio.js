@@ -47,7 +47,7 @@
     A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a
     uma variável C e imprimir seu valor na tela. */
     function calcular(A, B){
-        let C = ''
+        let C = ''            
         if(A == B){
             C = A + B // Soma dos valores de A e B
         }
