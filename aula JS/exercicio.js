@@ -199,7 +199,7 @@
 
     console.log(IMC(peso, altura)); // Chama a função e imprime o resultado
 
-    /* Questão 15: 15.Escreva um programa que leia um número qualquer e mostre a tabuada
+    /* Questão 15: Escreva um programa que leia um número qualquer e mostre a tabuada
     desse número, usando a estrutura “for”.
     a. exemplo de saída para a entrada de número 8:
         i. 8 x 1 = 8
