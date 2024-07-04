@@ -32,9 +32,13 @@
     let c = 6
     let soma = a + b
 
-    if (soma > c){
-        console.log("A soma entre A e B é ", soma)
-        console.log("A soma entre A e B é maior que C")
+    if (soma < c){
+        console.log(`A soma de ${a} + ${b} é menor que ${c}`)
+        
+    }
+
+    else{
+        console.log(`A soma de ${a} +  ${b} é maior que ${c}`)
     }
 
     // Questão 6: Qual a saída desse código?
@@ -65,9 +69,9 @@
 
     /* Questão 8: O que acontece na execução do código a seguir? E se trocar a declaração da
     variável por let?*/
-    for (let contador = 0; contador < 5; contador++){
+    for (var contador = 0; contador < 5; contador++){
         console.log(contador) // Faz um laço de repeticção até o número 4
-        // Se torvar a variável por let não altera o resultado
+        
     }
 
     /* Questão 9: Faça um algoritmo que receba um número inteiro e imprima na tela o seu
@@ -120,6 +124,17 @@
     if (numeros[n] % 2 === 0) { // Verificando se o número é par
         console.log(numeros[n]);
     }  
+
+    /* 
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const pares = []
+    numerico.forEach((elemento) =>{
+        if(elemento%2 == 0){
+        pares.push(elemento)}
+        
+    })
+        console.log(pares)
+    */
 }
 
     /* Questão 13: Crie um programa que:
@@ -139,7 +154,7 @@
             resultado = "APROVADO"
         }
 
-        else if(media == 5 && media < 7){
+        else if(media >= 5){
             resultado = "RECUPERAÇÃO"
         }
 
@@ -151,9 +166,9 @@
     }
     
     // Uso da função
-    let nota1 = 8.5;
+    let nota1 = 4.5;
     let nota2 = 9.4;
-    let nota3 = 7.8;
+    let nota3 = 3.0;
     console.log(media(nota1, nota2, nota3))
 
     /* Questão 14: Crie um programa que calcule o IMC e exiba na tela junto com a situação. O
@@ -169,20 +184,20 @@
         i. “Seu IMC é 23, resultado: Peso Ideal”*/
     function IMC(peso, altura){
         let imc = (peso / (altura ** 2))
-        let resultado = ''
-        if(imc < 18.5){
+        let resultado
+        if(imc <= 18.5){
             resultado = "ABAIXO DO PESO"
         } 
         
-        else if(imc >= 18.5 && imc < 25){
+        else if(imc <= 25){
             resultado = "PESO IDEAL"
         } 
         
-        else if(imc >=25 && imc < 30){
+        else if(imc <= 30){
             resultado = "SOBREPESO"
         } 
         
-        else if(imc >= 30 && imc <= 40){
+        else if(imc <= 40){
             resultado = "OBESIDADE"
         } 
         
@@ -194,8 +209,8 @@
     }
 
     // Uso da função
-    let peso = 70; // em kg
-    let altura = 1.75; // em metros
+    let peso = 80; // em kg
+    let altura = 1.65; // em metros
 
     console.log(IMC(peso, altura)); // Chama a função e imprime o resultado
 
@@ -215,16 +230,18 @@
     // Questão 16:Interprete o diagrama a seguir e crie seu código
     let n1 = 10
     let n2 = 2
-    let r = ''
-    if(n2 != 0){
-        r = n1 / n2
+    function divisao(x, y){
+        try{
+            if(y == 0){
+                throw Error('Zero  não é permitido')
+            } else{
+                console.log(x / z)
+            }
+        }catch (error) {
+            console.error(error)
+        }
     }
-
-    else{
-        console.log('Operação inválida')
-    }
-
-    console.log(r)
+    divisao(n1, n2)
 
     /* Questão 17: Um motorista faz diversas viagens. Ele está em um carro que faz 9.8km por
     litro (considere o litro da gasolina 5.24R$). Crie um programa que receba a
@@ -251,7 +268,7 @@
     }
 
     // Uso da função
-    const distancia = 200 // Distãncia que será multiplicada por 2
+    const distancia = 2900 // Distãncia que será multiplicada por 2
     const custoTotal = calcularCustoViagem(distancia)
     console.log(custoTotal)
 
@@ -264,14 +281,18 @@
     i. “O fatorial de 5 é 120” */
 
     function factorialize(num) {
+        try{
         if (num < 0) 
-              return -1;
+              throw Error("Não pode fatorial de numero negativo")
         else if (num == 0) 
              return 1;
          else {
-             return (num * factorialize(num - 1));
+             return num * factorialize(num - 1)
        }
+    }catch (error){
+        console.log(error)
     }
+}
      console.log("O fatorial de 5 é ", factorialize(5))
 
      /*Questão 19: Escreva um programa que leia o array [12, 36, 52, 77] e imprime um novo
@@ -312,8 +333,8 @@
     }
 
     // Exemplo de variáveis booleanas
-    let carteiraIdentidade = true // ou false
-    let carteiraMotorista = false // ou true
+    let carteiraIdentidade = false// ou false
+    let carteiraMotorista = true// ou true
 
     // Verifica a identidade e exibe o resultado
     var resul = verificarIdentidade(carteiraIdentidade, carteiraMotorista);
